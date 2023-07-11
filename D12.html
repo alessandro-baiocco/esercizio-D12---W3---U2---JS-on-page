@@ -144,18 +144,17 @@
       /* ESERCIZIO 7
          Scrivi una funzione che faccia scomparire la prima lista non ordinata
       */
-      const firstUl = document.querySelector("div ul:first-of-type");
+      const firstUl = document.getElementById("firstList");
       const ulInnerLi = document.querySelector("#firstList li");
 
       const hideFirstUl = function () {
-        firstUl.style = "display: none";
-        for (j = 0; j < ulInnerLi.length; j++) {
+        firstUl.style.display = "none";
+        /*for (j = 0; j < ulInnerLi.length; j++) {
           ulInnerLi[j].style = "display: none";
-        }
+        }*/
       };
 
       hideFirstUl();
-      console.log(firstUl);
 
       /* ESERCIZIO 8
          Scrivi una funzione che renda verde il background di ogni lista non ordinata
@@ -196,6 +195,12 @@
          La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
       */
       const posizioneTavola = document.getElementById("tableArea");
+      const arrayVari = [
+        ["prima", "seconda", "terza", "quarta", "quinta"],
+        ["tizio", "caio", "pippo", "pluto", "topolino"],
+        [5, 3, 12, 43, 9],
+        ["6$", "8$", "14$", "32$", "43$"],
+      ];
 
       const generateTable = function () {
         const newTable = document.createElement("table");
@@ -208,8 +213,8 @@
           bodyTable.appendChild(tableRow);
           for (let j = 0; j < 4; j++) {
             const tableCell = document.createElement("td");
-            tableRow = document.appendChild(tableCell);
-            tableCell.innerText = "";
+            tableRow.appendChild(tableCell)[j];
+            tableCell.innerText = arrayVari[j][i];
           }
         }
       };
