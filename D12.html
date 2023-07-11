@@ -196,16 +196,16 @@
       */
       const posizioneTavola = document.getElementById("tableArea");
       const arrayVari = [
-        ["prima", "seconda", "terza", "quarta", "quinta"],
-        ["tizio", "caio", "pippo", "pluto", "topolino"],
-        [5, 3, 12, 43, 9],
-        ["6$", "8$", "14$", "32$", "43$"],
+        ["prima", "seconda", "terza", "quarta", "quinta", "sesta"],
+        ["tizio", "caio", "pippo", "pluto", "topolino", "paperino"],
+        [5, 3, 12, 43, 9, 12],
+        ["6$", "8$", "14$", "32$", "43$", "54$"],
       ];
+      const newTable = document.createElement("table");
+      const bodyTable = document.createElement("tbody");
 
       const generateTable = function () {
-        const newTable = document.createElement("table");
         newTable.style.border = "solid 1px black;";
-        const bodyTable = document.createElement("tbody");
         newTable.appendChild(bodyTable);
         posizioneTavola.appendChild(newTable);
         for (let i = 0; i < 5; i++) {
@@ -224,14 +224,30 @@
       /* ESERCIZIO 12
          Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
       */
+      /* const questaTavola = document.getElementsByTagName("tr");
 
-      const addRow = function () {};
+      const addRow = function () {
+        const tableRow = document.createElement("tr");
+        questaTavola.appendChild(tableRow);
+        for (let j = 0; j < 4; j++) {
+          const tableCell = document.createElement("td");
+          tableRow.appendChild(tableCell)[j];
+          tableCell.innerText = arrayVari[j][j];
+        }
+      };
+
+      addRow(); /*
 
       /* ESERCIZIO 14
         Crea una funzione che nasconda le immagini della tabella quando eseguita
       */
+      const primeCell = document.querySelectorAll("tr td:first-of-type");
 
-      const hideAllImages = function () {};
+      const hideAllImages = function () {
+        primeCell.toggle("hidden");
+      };
+
+      primeCell.onclick = hideAllImages;
 
       /* EXTRA ESERCIZIO 15
         Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
