@@ -260,8 +260,9 @@
       const sottoTitle = document.getElementById("changeMyColor");
 
       const changeColorWithRandom = function () {
-        sottoTitle.style = `color: rgb(${colorRgb},${colorRgb2},${colorRgb3})`;
+        sottoTitle.innerHTML = `<h2 id="changeMyColor" style="color: rgb(${colorRgb},${colorRgb2},${colorRgb3})">Apri questa pagina con VSCode per scoprire gli esercizi</h2>`;
       };
+      console.log(sottoTitle);
       sottoTitle.onclick = changeColorWithRandom;
 
       /* EXTRA ESERCIZIO 16
