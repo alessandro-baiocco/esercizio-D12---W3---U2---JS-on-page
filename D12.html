@@ -23,7 +23,7 @@
 
       footer {
         padding: 1rem;
-        background-color: black;
+        background-color: rgb(0, 0, 0);
         color: white;
       }
 
@@ -254,13 +254,15 @@
       /* EXTRA ESERCIZIO 15
         Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
       */
-      /* const colorRgb = Math.floor(Math.random * 255);
-      const sottoTitle = document.getElementsByTagName("h2");
+      const colorRgb = Math.floor(Math.random * 255);
+      const colorRgb2 = Math.floor(Math.random * 255);
+      const colorRgb3 = Math.floor(Math.random * 255);
+      const sottoTitle = document.getElementById("changeMyColor");
 
       const changeColorWithRandom = function () {
-        sottoTitle.style = {['rgb('${colorRgb} colorRgb, colorRgb, )};
+        sottoTitle.style = `color: rgb(${colorRgb},${colorRgb2},${colorRgb3})`;
       };
-      sottoTitle.onclick = changeColorWithRandom; /*
+      sottoTitle.onclick = changeColorWithRandom;
 
       /* EXTRA ESERCIZIO 16
         Crea una funzione che elimini le vocali da ogni elemento testuale della pagina (puoi aiutarti con i nuovi metodi degli array di ES6)
